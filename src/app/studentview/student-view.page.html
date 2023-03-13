@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Student Page Details </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" icon="resgiter-from"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <form >
+  <ion-item>
+    <ion-label> <b>StudentName: </b> </ion-label>
+    {{ value.Studentname }}
+  </ion-item>
+  <ion-item>
+    <ion-label> <b>Address :</b></ion-label>
+    {{ value.address }}
+  </ion-item>
+  <ion-item>
+    <ion-label><b>Email:</b></ion-label>
+    {{ value.email }}
+  </ion-item>
+  <ion-item>
+    <ion-label> <b>Password :</b></ion-label>
+    {{ value.password }}
+  </ion-item>
+  <ion-item>
+    <ion-label><b>Phone :</b></ion-label>
+    {{ value.phone }}
+  </ion-item>
+</form>
+</ion-content>

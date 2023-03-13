@@ -1,0 +1,39 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Student Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen class="ion-padding">
+  <form [formGroup]="editStudent" (ngSubmit)="onEdit(editStudent.value) ">
+  <ion-item   lines="full">
+    <ion-label><b>StudentName :</b></ion-label>
+    <ion-input type="text" required formControlName="name" class="form-control"
+    placeholder="Studentname"></ion-input>
+  </ion-item>
+  <ion-item  style="margin-top:20px">
+  <ion-label><b>Phone :</b></ion-label>
+  <ion-input placeholder="Phone" type="number" required formControlName="phone"></ion-input>
+    </ion-item>
+  <ion-item  style="margin-top:20px">
+    <ion-label><b>Email :</b></ion-label>
+    <ion-input placeholder="Email" type="text" required formControlName="email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label><b>Password :</b></ion-label>
+    <ion-input type="Password" required formControlName="password" class="form-control"
+    placeholder="Password"></ion-input>
+  </ion-item>
+  <ion-item  style="margin-top:20px">
+    <ion-label><b>Address :</b></ion-label>
+    <ion-input placeholder="Address" type="text" required formControlName="address"></ion-input>
+    </ion-item>
+  <ion-item  style="margin-top:20px">
+    <ion-label>
+      <ion-button type="edit"><b>Edit</b></ion-button>
+    </ion-label> 
+  </ion-item >
+</form>
+</ion-content>

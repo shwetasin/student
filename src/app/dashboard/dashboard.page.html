@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Student Dashboard</ion-title>
+    <ion-buttons slot="end" (click)="Logout()">
+      <ion-button type="Logout" >Logout </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content  fullscreen class="ion-padding">
+  <ion-list>
+    <ion-item>
+      <ion-grid>
+      <ion-row>   
+        <ion-col>
+        {{studentData.Studentname}} 
+      </ion-col>
+    </ion-row>
+    <ion-row>   
+      <ion-col>
+      {{studentData.email}} 
+    </ion-col>
+  </ion-row>
+  <ion-row>   
+    <ion-col>
+    {{studentData.address}} 
+  </ion-col>
+</ion-row>
+<ion-row>   
+  <ion-col>
+  {{studentData.phone}} 
+</ion-col>
+</ion-row>
+  </ion-grid>
+  <ion-text slot="end"></ion-text>
+  <!-- <ion-item class="ion-text-bottom ">
+  <ion-button type="Studentview" [routerLink]="['/student-view',email]" ><b>View</b></ion-button>
+</ion-item> --> 
+<button ion-button [routerLink]="['/studentedit',studentData.email]">
+  <ion-button  type="StudentEdit"><b>Edit</b></ion-button>
+</button>
+    </ion-item>
+</ion-list>
+</ion-content>
